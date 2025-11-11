@@ -1,4 +1,3 @@
-import sys
 import random
 import numpy as np
 import scipy.sparse as sp
@@ -119,7 +118,7 @@ def write_results(similar_pairs, filename="result.txt"):
         for user1, user2 in similar_pairs:
             f.write(f"{user1},{user2}\n")
 
-def plot_similarities(similarities, threshold=0.5, filename="similarities.png"):
+def plot_similarities(similarities, threshold=0.5):
     # plot of Jaccard similarities (sorted)
     if not similarities:
         print("No similar pairs to plot.")
@@ -134,5 +133,4 @@ def plot_similarities(similarities, threshold=0.5, filename="similarities.png"):
     plt.ylabel("Jaccard Similarity")
     plt.title(f"{len(sims_sorted)} pairs with JS > {threshold}")
     plt.tight_layout()
-    plt.savefig(filename)
-    plt.close()
+    plt.show()
