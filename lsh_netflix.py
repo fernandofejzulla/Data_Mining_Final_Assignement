@@ -57,7 +57,7 @@ def generate_minhash_signatures(user_movie_matrix, signature_length, random_seed
     
     return signatures
 
-def lsh_find_similar_pairs(signatures, bands, rows_per_band, threshold=0.5):
+def lsh_find_similar_pairs(signatures, bands, rows_per_band):
     n_users = signatures.shape[1]
     candidate_pairs = set()
     
@@ -134,3 +134,4 @@ def plot_similarities(similarities, threshold=0.5):
     plt.title(f"{len(sims_sorted)} pairs with JS > {threshold}")
     plt.tight_layout()
     plt.show()
+
