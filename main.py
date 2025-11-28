@@ -12,7 +12,7 @@ def main():
     
     signature_length = 100
     bands = 10
-    rows_per_band = 10
+    rows_per_band = signature_length // bands # floor division
     similarity_threshold = 0.5
     
     print("Loading data...")
@@ -41,4 +41,5 @@ def main():
     plot_similarities(similarities, similarity_threshold)
 
 if __name__ == "__main__":
+
     main()
