@@ -44,4 +44,5 @@ To use your own random_seed when running:
 python main.py <your_seed>
 ```
 
-The script loads data, builds signatures, executes LSH, outputs similar user pairs to result.txt and shows a scatter plot of similarity values.
+
+The script loads data, builds signatures, executes LSH, outputs similar user pairs to result.txt, shows a scatter plot of similarity values, and automatically terminates after the 30-minute time cap.
